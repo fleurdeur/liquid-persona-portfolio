@@ -77,7 +77,7 @@ export function AvatarCard() {
 
   return (
     <>
-      <div className="[perspective:1400px]">
+      <div className="w-full max-w-sm [perspective:1400px]">
         <button
           ref={ref}
           type="button"
@@ -85,7 +85,7 @@ export function AvatarCard() {
           onMouseLeave={reset}
           onClick={() => setOpen(true)}
           aria-label="Open a larger view of the identity card"
-          className="group relative block w-full max-w-sm cursor-pointer rounded-[2rem] outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="group relative block w-full cursor-pointer rounded-[2rem] outline-none focus-visible:ring-2 focus-visible:ring-ring"
           style={{
             transform: `rotateX(${t.rx}deg) rotateY(${t.ry}deg) scale(${t.active ? 1.04 : 1})`,
             transformStyle: "preserve-3d",
