@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SettingsProvider } from "@/lib/settings";
+import { Backdrop } from "@/components/Backdrop";
+import { BottomNav } from "@/components/BottomNav";
 
 function NotFoundComponent() {
   return (
