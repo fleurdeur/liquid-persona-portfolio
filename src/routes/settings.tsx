@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Gauge, Waves, Palette, MousePointer2 } from "lucide-react";
 import { THEMES, useSettings, type ThemeId } from "@/lib/settings";
+import { Reveal, AnimatedText } from "@/components/Reveal";
 
 export const Route = createFileRoute("/settings")({
   head: () => ({
@@ -37,7 +38,7 @@ function Toggle({
       aria-checked={on}
       aria-label={label}
       onClick={() => onChange(!on)}
-      className="relative h-8 w-14 shrink-0 rounded-full transition-all duration-500"
+      className="hover-pop-sm relative h-8 w-14 shrink-0 rounded-full transition-all duration-500"
       style={{
         background: on
           ? "linear-gradient(135deg, var(--primary), var(--primary-glow))"
@@ -69,7 +70,7 @@ function Row({
   children: React.ReactNode;
 }) {
   return (
-    <div className="glass flex items-center gap-4 rounded-3xl p-5">
+    <div className="glass hover-pop flex items-center gap-4 rounded-3xl p-5">
       <div
         className="flex size-11 shrink-0 items-center justify-center rounded-2xl"
         style={{ background: "color-mix(in oklab, var(--primary) 22%, transparent)" }}
@@ -91,20 +92,21 @@ function SettingsPage() {
   return (
     <div className="mx-auto w-full max-w-3xl px-5 pb-40 pt-16 sm:pt-24">
       <p
-        className="tag-slant inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-[0.35em]"
+        className="tag-slant hover-pop-sm inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-[0.35em]"
         style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
       >
         Config
       </p>
       <h1 className="mt-6 text-5xl sm:text-7xl">
-        SETTINGS<span style={{ color: "var(--primary)" }}>.</span>
+        <AnimatedText text="SETTINGS" delay={120} />
+        <span style={{ color: "var(--primary)" }}>.</span>
       </h1>
 
       <div className="mt-10 space-y-4">
         <Row
           icon={Gauge}
           title="Render mode"
-          desc="Performance strips blur and long animations for low-power devices."
+          desc="Performance strips blur and long animations. Your laptop fan will thank you."
         >
           <div className="glass flex shrink-0 rounded-full p-1">
             {(["quality", "performance"] as const).map((m) => (
@@ -112,7 +114,7 @@ function SettingsPage() {
                 key={m}
                 type="button"
                 onClick={() => set("perf", m)}
-                className="relative rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300"
+                className="hover-pop-sm relative rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300"
                 style={{
                   background:
                     perf === m ? "linear-gradient(135deg, var(--primary), var(--primary-glow))" : "transparent",
@@ -125,7 +127,7 @@ function SettingsPage() {
           </div>
         </Row>
 
-        <Row icon={Waves} title="Motion blur" desc="Adds velocity smear to cards and transitions.">
+        <Row icon={Waves} title="Motion blur" desc="Adds a little velocity smear. Tasteful, mostly.">
           <Toggle on={motionBlur} onChange={(v) => set("motionBlur", v)} label="Motion blur" />
         </Row>
 
@@ -133,7 +135,7 @@ function SettingsPage() {
           <Toggle on={tilt} onChange={(v) => set("tilt", v)} label="3D cursor tilt" />
         </Row>
 
-        <div className="glass rounded-3xl p-5">
+        <div className="glass hover-pop rounded-3xl p-5">
           <div className="flex items-center gap-4">
             <div
               className="flex size-11 shrink-0 items-center justify-center rounded-2xl"
@@ -143,7 +145,7 @@ function SettingsPage() {
             </div>
             <div>
               <h2 className="text-lg tracking-wide">Theme</h2>
-              <p className="text-sm text-muted-foreground">Four palettes, applied instantly.</p>
+              <p className="text-sm text-muted-foreground">Four palettes. All of them avoid the default purple.</p>
             </div>
           </div>
 
@@ -153,7 +155,7 @@ function SettingsPage() {
                 key={t.id}
                 type="button"
                 onClick={() => set("theme", t.id as ThemeId)}
-                className="glass-sheen flex items-center gap-3 rounded-2xl p-4 text-left transition-transform duration-500 hover:-translate-y-0.5"
+                className="glass-sheen hover-pop flex items-center gap-3 rounded-2xl p-4 text-left"
                 style={{
                   border:
                     theme === t.id
@@ -182,7 +184,7 @@ function SettingsPage() {
       </div>
 
       <p className="mt-8 text-center font-mono text-xs text-muted-foreground">
-        Preferences are saved on this device.
+        Saved on this device only. No cookies, no newsletter, no funnel.
       </p>
     </div>
   );
