@@ -32,11 +32,11 @@ const TICKER = [
 ];
 
 const STATS = [
-  { label: "TypeScript", value: 4, note: "Comfortable. Still googling generics." },
-  { label: "Rust", value: 3, note: "The borrow checker and I are on speaking terms." },
+  { label: "TypeScript", value: 4, note: "Genuinely a mtn successor of JS" },
+  { label: "Rust", value: 3, note: "I dont like this at all." },
   { label: "Interface craft", value: 4, note: "I care about the 8px nobody notices." },
-  { label: "Systems design", value: 3, note: "Good instincts, better diagrams." },
-  { label: "Patience in review", value: 4, note: "Learned the hard way." },
+  { label: "Systems design", value: 3, note: "Larping PS: RELOAD" },
+  { label: "Patience in review", value: 4, note: "Status : Unknown " },
 ];
 
 function Index() {
@@ -62,7 +62,7 @@ function Index() {
           animation: "rise 0.7s cubic-bezier(0.16,1,0.3,1) both",
         }}
       >
-        currently: open to trouble
+        currently: MANIPULATING PAWNS
       </span>
 
       <div className="mt-8 grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_380px]">
@@ -76,7 +76,7 @@ function Index() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             <AnimatedText
-              text="Full-stack engineer. I build interfaces that behave like liquid glass and codebases that behave like adults. Six years of shipping, one very patient rubber duck."
+              text="Full-stack LARPER. I build nonsense."
               delay={420}
               step={26}
             />
@@ -86,10 +86,10 @@ function Index() {
           <Reveal delay={120}>
             <div className="mt-8 flex flex-wrap gap-3">
               {[
-                { icon: Terminal, text: "TypeScript · Rust" },
-                { icon: Sparkles, text: "Motion & shaders" },
-                { icon: Swords, text: "Systems design" },
-                { icon: Gamepad2, text: "Weekend game jams" },
+                { icon: Terminal, text: "Coding" },
+                { icon: Sparkles, text: "Photo/Video Editing" },
+                { icon: Swords, text: "Horrible Graphic Designer" },
+                { icon: Gamepad2, text: "Hates VALORANT." },
               ].map(({ icon: Icon, text }) => (
                 <span
                   key={text}
@@ -110,9 +110,9 @@ function Index() {
 
       <section className="mt-24">
         <Reveal>
-          <h2 className="text-3xl tracking-widest">HONEST STATS</h2>
+          <h2 className="text-3xl tracking-widest">LOSER STATS</h2>
           <p className="mt-2 max-w-lg text-sm text-muted-foreground">
-            Self-assessed, deliberately un-inflated. Nobody is a 10x anything at 2am.
+            Busy creating slop even though i have tons of assignment.
           </p>
         </Reveal>
 
@@ -150,7 +150,7 @@ function Index() {
         <p className="mt-16 font-mono text-xs text-muted-foreground">
           <span style={{ color: "var(--primary)" }}>$</span> whoami --honest
           <br />
-          Someone who reads the error message. Eventually.
+          Did you actually read those? What an easy pawn.
         </p>
       </Reveal>
     </div>
