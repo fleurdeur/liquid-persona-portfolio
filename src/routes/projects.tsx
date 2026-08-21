@@ -5,13 +5,13 @@ import { Reveal, AnimatedText } from "@/components/Reveal";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Experience & Side Quests — Rin Aoki" },
+      { title: "Experience & Side Quests — Fleur" },
       {
         name: "description",
         content:
           "Engineering log: realtime platforms, design systems, robot telemetry, plus the side projects that ate my weekends.",
       },
-      { property: "og:title", content: "Experience & Side Quests — Rin Aoki" },
+      { property: "og:title", content: "Experience & Side Quests — Fleur" },
       {
         property: "og:description",
         content: "Realtime platforms, design systems, robot telemetry, and weekend-eating side projects.",
@@ -24,26 +24,26 @@ export const Route = createFileRoute("/projects")({
 const TIMELINE = [
   {
     arcana: "Now playing",
-    role: "Staff Engineer · Kuro Systems",
-    years: "2023 — present",
+    role: "Cloud",
+    years: "2025 — present",
     icon: Rocket,
-    body: "Realtime edge platform at 40k msg/s. Cut dashboard hydration from 1.4s to under 200ms — mostly by deleting things I wrote in 2023.",
-    tags: ["Rust", "Edge", "Observability"],
+    body: "Drifting across the sky",
+    tags: ["Alto", "Stratosphere", "Observability"],
   },
   {
     arcana: "Previously on",
-    role: "Senior Frontend · Neon Atelier",
+    role: "Discord Technical",
     years: "2021 — 2023",
     icon: Wand2,
-    body: "Built a token-driven glass UI kit adopted by seven squads. Enforced a motion budget, which is a polite way of saying I removed a lot of bounce easing.",
-    tags: ["React", "Motion", "Design systems"],
+    body: "Not much of a hassle. Probably.",
+    tags: ["Experiments", "Bots", "Harmless"],
   },
   {
-    arcana: "Origin arc",
-    role: "Engineer · Mecha Labs",
+    arcana: "Genuinely Useless",
+    role: "Bystander",
     years: "2019 — 2021",
     icon: Cpu,
-    body: "Firmware-to-cloud telemetry for warehouse robots. Chased a race condition that only fired on Tuesdays. It was, of course, a timezone.",
+    body: "Missing brain. How is this even connected to the cpu.",
     tags: ["Go", "MQTT", "Embedded"],
   },
 ];
@@ -51,21 +51,21 @@ const TIMELINE = [
 const PROJECTS = [
   {
     icon: Ghost,
-    title: "Palace Router",
-    kicker: "Open source",
-    body: "A tiny state-machine router for cinematic page transitions. 3.1k stars, zero dependencies, one very confused issue tracker.",
+    title: "Flood Control Project",
+    kicker: "Fund-Sourced",
+    body: "Status: DEBUNKED.",
   },
   {
     icon: Radio,
-    title: "Aether FM",
-    kicker: "Weekend build",
-    body: "Listening rooms with WebRTC and waveform shaders. Shipped in 48 hours, still up, still slightly held together with hope.",
+    title: "ArchiveTune",
+    kicker: "Best Music App",
+    body: "I love cats btw.",
   },
   {
     icon: Boxes,
-    title: "Chibi Engine",
+    title: "Personal Websites",
     kicker: "Experiment",
-    body: "WebGPU sprite engine for small 2D RPGs. 20k sprites at a locked 120fps, and exactly one finished game: mine.",
+    body: "Scattered through the internet.",
   },
 ];
 
@@ -80,16 +80,16 @@ function Projects() {
           animation: "rise 0.7s cubic-bezier(0.16,1,0.3,1) both",
         }}
       >
-        the changelog
+        CHANGE LOG
       </span>
 
       <h1 className="mt-6 text-5xl sm:text-7xl">
-        <AnimatedText text="EXPERIENCE" delay={120} />
+        <AnimatedText text="A LOSER'S JOURNEY" delay={120} />
         <span style={{ color: "var(--primary)" }}>.</span>
       </h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
         <AnimatedText
-          text="Three jobs, a handful of outages, and the slow realisation that most engineering is deleting code you were proud of."
+          text="Unemployed"
           delay={320}
           step={22}
         />
@@ -138,7 +138,7 @@ function Projects() {
 
       <Reveal>
         <h2 className="mt-16 text-3xl tracking-widest">SIDE QUESTS</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Started for fun. Maintained out of guilt.</p>
+        <p className="mt-2 text-sm text-muted-foreground">free time = loaded with tasks.</p>
       </Reveal>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
