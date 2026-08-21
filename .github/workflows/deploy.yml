@@ -1,8 +1,3 @@
-Update `actions/checkout@v4` to `actions/checkout@v5` (or later) in your workflow file to resolve the Node 24 runtime deprecation error.
-
-Replace your `.github/workflows/deploy.yml` with this updated version:
-
-```yaml
 name: Deploy to GitHub Pages
 
 on:
@@ -23,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -53,5 +48,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-```
