@@ -127,14 +127,19 @@ function SettingsPage() {
             ))}
           </div>
         </Row>
+        </Reveal>
 
-        <Row icon={Waves} title="Motion blur" desc="Adds a little velocity smear. Tasteful, mostly.">
-          <Toggle on={motionBlur} onChange={(v) => set("motionBlur", v)} label="Motion blur" />
-        </Row>
+        <Reveal delay={90}>
+          <Row icon={Waves} title="Motion blur" desc="Adds a little velocity smear. Tasteful, mostly.">
+            <Toggle on={motionBlur} onChange={(v) => set("motionBlur", v)} label="Motion blur" />
+          </Row>
+        </Reveal>
 
-        <Row icon={MousePointer2} title="3D cursor tilt" desc="Photo card follows your pointer in 3D.">
-          <Toggle on={tilt} onChange={(v) => set("tilt", v)} label="3D cursor tilt" />
-        </Row>
+        <Reveal delay={180}>
+          <Row icon={MousePointer2} title="3D cursor tilt" desc="The ID card leans toward your pointer.">
+            <Toggle on={tilt} onChange={(v) => set("tilt", v)} label="3D cursor tilt" />
+          </Row>
+        </Reveal>
 
         <div className="glass hover-pop rounded-3xl p-5">
           <div className="flex items-center gap-4">
