@@ -52,9 +52,9 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement;
-    root.dataset.theme = settings.theme;
-    root.dataset.perf = settings.perf;
-    root.dataset.blur = settings.motionBlur && settings.perf === "quality" ? "on" : "off";
+    root.dataset["theme"] = settings.theme;
+    root.dataset["perf"] = settings.perf;
+    root.dataset["blur"] = settings.motionBlur && settings.perf === "quality" ? "on" : "off";
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
     } catch {
