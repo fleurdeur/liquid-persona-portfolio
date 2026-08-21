@@ -103,6 +103,7 @@ function SettingsPage() {
       </h1>
 
       <div className="mt-10 space-y-4">
+        <Reveal>
         <Row
           icon={Gauge}
           title="Render mode"
