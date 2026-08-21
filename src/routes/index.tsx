@@ -68,9 +68,9 @@ function Index() {
       <div className="mt-8 grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_380px]">
         <div>
           <h1 className="text-6xl leading-[0.86] sm:text-8xl">
-            <AnimatedText text="RIN" delay={100} />
+            <AnimatedText text="FLEUR" delay={100} />
             <span className="text-glow block" style={{ color: "var(--primary)" }}>
-              <AnimatedText text="AOKI" delay={220} />
+              <AnimatedText text="2h.eth" delay={220} />
             </span>
           </h1>
 
