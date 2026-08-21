@@ -6,7 +6,7 @@ import { Reveal, AnimatedText } from "@/components/Reveal";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Customize — Rin Aoki Portfolio" },
+      { title: "Customize — Fleur Portfolio" },
       {
         name: "description",
         content:
