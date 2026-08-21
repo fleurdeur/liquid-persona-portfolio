@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Rin Aoki: full-stack engineer, part-time anime apologist. Liquid-glass interfaces, honest changelogs, zero stock photos.",
+          "Fleur: full-stack engineer, part-time anime apologist. Liquid-glass interfaces, honest changelogs, zero stock photos.",
       },
       { property: "og:title", content: "Rin Aoki — Engineer Who Ships" },
       {
